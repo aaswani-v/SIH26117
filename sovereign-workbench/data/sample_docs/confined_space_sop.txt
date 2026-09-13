@@ -1,0 +1,18 @@
+Confined Space Entry SOP — Section 4.2
+
+Before any confined space entry at Unit 4, the following lockout-tagout
+sequence must be completed in order:
+
+1. Isolate and lock out all energy sources feeding the vessel, including
+   electrical, pneumatic, and process line connections.
+2. Verify zero-energy state using a calibrated tester before proceeding.
+3. Attach lockout tags bearing the entrant's name and the time of lockout.
+4. Test the internal atmosphere for oxygen level, lower explosive limit
+   (LEL), and hydrogen sulfide (H2S) concentration. Log all three readings
+   before entry is authorized.
+5. Assign a dedicated attendant stationed at the entry point for the
+   entire duration of the entry, with continuous communication to the
+   entrant.
+
+No entry is authorized until steps 1-4 are logged and step 5 is confirmed
+in place.

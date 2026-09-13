@@ -1,0 +1,14 @@
+Unit 4 Vessel Safe Operating Range Reference
+
+Vessel pressure: normal operating range 140-175 psi. Readings above 175 psi
+must be flagged for immediate engineer review. Readings above 190 psi
+require unit shutdown per emergency procedure EP-12.
+
+Wall temperature: nominal range is 310-340 degrees F. A reading more than 5%
+above nominal should be flagged as a corrosion risk indicator, especially
+if paired with a rising trend across consecutive inspections.
+
+Corrosion probe readings: an upward trend across two or more consecutive
+inspection cycles should be flagged even if the absolute value remains
+within tolerance, since trend direction is often a leading indicator of
+wall thinning before the value itself exceeds tolerance.

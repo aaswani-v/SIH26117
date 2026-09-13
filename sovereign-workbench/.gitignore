@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment (~1.4GB, rebuild with: pip install -r requirements.txt)
+venv/
+.venv/
+env/
+
+# RAG index - regenerable with: python main.py --ingest data/sample_docs
+chroma_db/
+
+# Per-run outputs (JSON audit logs, .docx results)
+output/*
+!output/.gitkeep
+
+# Model / embedding caches, if ever placed in-project
+.cache/
+*.gguf
+*.safetensors
+
+# Env and secrets
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

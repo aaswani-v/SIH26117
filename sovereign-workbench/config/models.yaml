@@ -1,0 +1,38 @@
+# Model registry — adding a new task type or swapping a model is a config edit,
+# not a code change. Ollama tag names change over time; run `ollama list` after
+# pulling to confirm the exact tag string installed on your machine, and update
+# the "tag" fields below to match.
+
+routes:
+  text:
+    description: "General reasoning, summarization, SOP lookup, structured extraction"
+    ollama_tag: "qwen2.5:7b-instruct-q4_K_M"
+    context_tokens: 4096
+    keywords: ["summarize", "summarise", "explain", "procedure", "sop", "log",
+               "report", "flag", "check", "compare", "extract", "list", "lockout",
+               "tagout", "confined space", "reading", "inspection"]
+
+  vision:
+    description: "Diagram / image reading — P&IDs, scanned forms, photos"
+    ollama_tag: "qwen2.5vl:7b-q4_K_M"
+    context_tokens: 4096
+    keywords: ["diagram", "p&id", "pid", "image", "photo", "scan", "drawing",
+               "valve", "schematic", "picture", "screenshot"]
+
+  code:
+    description: "Small code/config generation or debugging tasks"
+    ollama_tag: "qwen2.5-coder:7b-instruct-q4_K_M"
+    context_tokens: 4096
+    keywords: ["code", "script", "function", "debug", "sql", "regex", "yaml", "json"]
+
+default_route: text
+
+# Embeddings run on CPU deliberately — keeps all 6GB VRAM free for the LLM.
+embedding:
+  model: "BAAI/bge-small-en-v1.5"   # small + CPU-friendly; swap for bge-m3 if you free up RAM/GPU later
+  device: "cpu"
+
+hardware_profile:
+  vram_gb: 6
+  ram_gb: 20
+  max_concurrent_models: 1   # load/unload sequentially — don't try to hold 2 models resident at once
